@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+  <title>Student Profile - Jezriel Raphael Sia</title>
+  <style>
+    
+    :root {
+      --rb-navy: #061222;
+      --rb-light-navy: #12243b;
+      --rb-red: #e80020;
+      --rb-yellow: #ffd600;
+      --text-main: #ffffff;
+      --text-muted: #94a3b8;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--rb-navy);
+      color: var(--text-main);
+      padding-bottom: 70px;
+      line-height: 1.6;
+    }
+
+    
+    header {
+      background-color: var(--rb-light-navy);
+      text-align: center;
+      padding: 3rem 1rem 2rem;
+      border-bottom: 4px solid var(--rb-red);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    }
+
+    header h1 {
+      font-size: 1.7rem;
+      margin-bottom: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .profile-pic {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--rb-yellow);
+      margin: 0 auto 1rem auto;
+      display: block;
+      box-shadow: 0 0 15px rgba(255, 214, 0, 0.3);
+    }
+
+    header p {
+      color: var(--rb-yellow);
+      font-size: 1rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    
+    nav {
+      margin-top: 1.5rem;
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+    }
+
+    nav a {
+      color: var(--rb-navy);
+      background-color: var(--text-main);
+      padding: 0.5rem 1.5rem;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      transition: all 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: var(--rb-yellow);
+      transform: translateY(-2px);
+    }
+
+   
+    section {
+      max-width: 600px;
+      margin: 2rem auto;
+      padding: 1.5rem;
+      background-color: var(--rb-light-navy);
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+      transition: transform 0.3s ease, border-color 0.3s ease;
+      border: 1px solid transparent;
+    }
+
+    section:target {
+      border-color: var(--rb-yellow);
+    }
+
+    h2 {
+      color: var(--rb-red);
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      padding-bottom: 0.5rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 1rem;
+    }
+
+    .sub-group h3 {
+      font-size: 1rem;
+      color: var(--rb-yellow);
+      margin-top: 1.2rem;
+      margin-bottom: 0.3rem;
+      text-transform: uppercase;
+    }
+
+    
+    .skill-card {
+      background: rgba(255, 255, 255, 0.03);
+      padding: 1rem;
+      margin-top: 0.8rem;
+      border-radius: 8px;
+      border-left: 4px solid var(--rb-red);
+      transition: background 0.3s ease;
+    }
+
+    .skill-card:hover {
+      background: rgba(255, 255, 255, 0.08);
+      border-left-color: var(--rb-yellow);
+    }
+
+    .skill-card h4 {
+      color: var(--text-main);
+      font-size: 1rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .skill-card p {
+      margin-bottom: 0;
+      font-size: 0.85rem;
+    }
+
+    /* Footer */
+    footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background: var(--rb-light-navy);
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      border-top: 2px solid var(--rb-red);
+      z-index: 10;
+    }
+  </style>
+</head>
+<body>
+
+  
+  <header>
+    <h1>Jezriel Raphael Sia</h1>
+    <img src="img/rieon.jpg" alt="Profile Picture of Jezriel" class="profile-pic">
+    <p>About Myself</p>
+    
+   
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+    </nav>
+  </header>
+
+ 
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I am currently an Information Technology student in my junior year, undergoing the essential routes for Software Engineering and Web Development. I have also taken an interest in creating data-driven analyses that truly complement a user's personal experiences and scalable day-to-day solutions.</p>
+    <p>Beyond my academic ventures, I am deeply involved in diverse data-driven sports frameworks, e-sports, and the analysis of human-machine interconnection development practices.</p>
+
+    <div class="sub-group">
+      <h3>Interests</h3>
+      <p>Mobile Application Engineering, Data Analysis, Market Manipulation.</p>
+
+      <h3>Educational Background</h3>
+      <p>Bachelor of Science in Information Technology (BSIT).</p>
+
+      <h3>Goals & Aspirations</h3>
+      <p>To become a leading tech engineer for Mercedes AMG Petronas or Oracle Red Bull Racing.</p>
+    </div>
+  </section>
+
+  
+  <section id="skills">
+    <h2>My Skills</h2>
+    
+    <div class="skill-card">
+      <h4>1. HTML5 & CSS</h4>
+      <p>Building semantic web page structures and styling designs that meet market demands.</p>
+    </div>
+
+    <div class="skill-card">
+      <h4>2. Apache Cordova</h4>
+      <p>Packaging web applications into native Android binaries for mobile installation.</p>
+    </div>
+
+    <div class="skill-card">
+      <h4>3. Java</h4>
+      <p>Handling dynamic masterclasses of broad emerging development and breaking down complex issues.</p>
+    </div>
+
+    <div class="skill-card">
+      <h4>4. JavaScript</h4>
+      <p>Adding behavior and interactivity to front-end applications.</p>
+    </div>
+
+    <div class="skill-card">
+      <h4>5. Mobile UI/UX Design</h4>
+      <p>Designing interfaces optimized specifically for touch devices and small viewports.</p>
+    </div>
+  </section>
+
+  
+  <footer>
+    <p>&copy; 2026 Jezriel Raphael C. Sia. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
