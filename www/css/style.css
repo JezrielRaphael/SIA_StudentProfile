@@ -1,0 +1,232 @@
+/**
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  See the License.  You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+    KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+*/
+
+:root {
+  --ferrari-red: #A6051A;
+  --ferrari-yellow: #FFE000;
+  --ferrari-white: #FFFFFF;
+  --ferrari-black: #111111;
+  --ferrari-card-bg: #1B1B1B;
+  --text-muted: #B0B0B0;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, 'Segoe UI', 'Roboto', sans-serif;
+}
+
+body {
+  background-color: var(--ferrari-black);
+  color: var(--ferrari-white);
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px) env(safe-area-inset-bottom, 0px) env(safe-area-inset-left, 0px);
+}
+
+header {
+  background-color: var(--ferrari-card-bg);
+  color: var(--ferrari-white);
+  padding: 1.5rem 0;
+  text-align: center;
+  border-bottom: 4px solid var(--ferrari-red);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
+}
+
+header h1 {
+  margin-bottom: 0.8rem;
+  font-size: 1.6rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 0 10px;
+}
+
+nav a {
+  color: var(--ferrari-black);
+  background-color: var(--ferrari-white);
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 16px;
+  border-radius: 25px;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+nav a:hover,
+nav a.active {
+  background-color: var(--ferrari-yellow);
+  color: var(--ferrari-black);
+  transform: translateY(-2px);
+  box-shadow: 0 0 10px rgba(255, 224, 0, 0.4);
+}
+
+.container {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 0 15px;
+  flex: 1;
+}
+
+.card {
+  background: var(--ferrari-card-bg);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+h2 {
+  color: var(--ferrari-red);
+  margin-bottom: 15px;
+  border-bottom: 2px solid var(--ferrari-red);
+  padding-bottom: 5px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+p {
+  color: var(--text-muted);
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.avatar, .profile-pic {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--ferrari-yellow);
+  box-shadow: 0 0 15px rgba(255, 224, 0, 0.3);
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.skill-item, .skill-card {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 15px;
+  border-radius: 8px;
+  border-left: 4px solid var(--ferrari-red);
+  transition: all 0.3s ease;
+}
+
+.skill-item:hover, .skill-card:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-left-color: var(--ferrari-yellow);
+}
+
+.skill-item h3, .skill-card h4 {
+  color: var(--ferrari-white);
+  margin-bottom: 0.4rem;
+}
+
+.project-card {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  border-left: 4px solid var(--ferrari-red);
+  transition: all 0.3s ease;
+}
+
+.project-card:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-left-color: var(--ferrari-yellow);
+}
+
+.project-card h3 {
+  color: var(--ferrari-white);
+  margin-bottom: 0.4rem;
+}
+
+.contact-list {
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+.contact-list li {
+  margin-bottom: 10px;
+  color: var(--ferrari-white);
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--ferrari-white);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--ferrari-yellow);
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: var(--ferrari-card-bg);
+  color: var(--text-muted);
+  border-top: 2px solid var(--ferrari-red);
+  margin-top: auto;
+}
+
+@media (max-width: 600px) {
+  .profile-header {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  nav {
+    gap: 6px;
+  }
+  
+  nav a {
+    width: auto;
+    font-size: 0.75rem;
+    padding: 6px 10px;
+  }
+}
