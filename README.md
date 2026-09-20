@@ -1,40 +1,16 @@
-# ITCC41-A Activity 3: Responsive Student Profile
+# ITCC41-A Activity 4
 
-A responsive Student Profile web application built using HTML5, CSS3 media queries, and Apache Cordova. This application displays a dynamic profile layout optimized for desktop, tablet, and mobile devices.
+## Activity 4 Documentation Screenshots
 
----
+### Mobile Application Views
+![Profile View](docs/act4_1_profile.png)
+![About View](docs/act4_2_about.png)
+![Skills View](docs/act4_3_skills.png)
+![Projects View](docs/act4_4_projects.png)
+![Contact View](docs/act4_5_contact.png)
 
-## 📱 Features
+### Developer Environment & Version Control
+![VS Code Explorer Directory](docs/act4_6_vscode_tree.png)
+![Cordova Execution](docs/act4_terminal_cordova.png)
+![Git Log and Status](docs/act4_terminal_git.png)
 
-* **Responsive Design:** Custom media query breakpoints catering to mobile, tablet, and desktop viewports.
-* **Profile Sections:** Includes **About Me**, **Interests**, **Educational Background**, **Goals & Aspirations**, and **Technical Skills**.
-* **Clean UI:** Styled with a dark-mode theme, custom cards, and interactive navigation elements.
-
----
-
-## 🖼️ Application Screenshots
-
-### Desktop View
-![Desktop View 1](www/img/desktop%201.png)
-![Desktop View 2](www/img/desktop%202.png)
-![Desktop View 3](www/img/desktop%203.png)
-
-### Tablet View
-![Tablet View 1](www/img/tablet%201.png)
-![Tablet View 2](www/img/tablet%202.png)
-
-### Mobile View
-![Mobile View 1](www/img/mobile%201.png)
-![Mobile View 2](www/img/mobile%202.png)
-
----
-
-## 🛠️ Tech Stack
-
-* **Frontend:** HTML5, CSS3, JavaScript
-* **Framework:** Apache Cordova
-* **Target Platforms:** Browser / Android
-
----
-
-© 2026 Jezriel Raphael C. Sia. All rights reserved.
