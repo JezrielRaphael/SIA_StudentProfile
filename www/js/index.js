@@ -1,29 +1,84 @@
-/**
-    Licensed to the Apache Software Foundation (ASF) under one
-    or more contributor license agreements.  See the NOTICE file
-    distributed with this work for additional information
-    regarding copyright ownership.  The ASF licenses this file
-    to you under the Apache License, Version 2.0 (the
-    "License"); you may not use this file except in compliance
-    with the License.  You may obtain a copy of the License at
+document.addEventListener('DOMContentLoaded', () => {
+    const viewName = document.getElementById('view-name');
+    const viewCourse = document.getElementById('view-course');
+    const viewYear = document.getElementById('view-year');
+    const viewAbout = document.getElementById('view-about');
+    const viewSkills = document.getElementById('view-skills');
 
-        http://www.apache.org/licenses/LICENSE-2.0
+    const editContainer = document.getElementById('profile-edit-container');
+    const displayContainer = document.getElementById('profile-display');
+    const editForm = document.getElementById('edit-profile-form');
+    const errorMessage = document.getElementById('error-message');
 
-    Unless required by applicable law or agreed to in writing,
-    software distributed under the License is distributed on an
-    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-    KIND, either express or implied.  See the License for the
-    specific language governing permissions and limitations
-    under the License.
-*/
+    const inputName = document.getElementById('input-name');
+    const inputCourse = document.getElementById('input-course');
+    const inputYear = document.getElementById('input-year');
+    const inputAbout = document.getElementById('input-about');
+    const inputSkills = document.getElementById('input-skills');
 
-// Wait for the deviceready event before using any of Cordova's device APIs.
-// See https://cordova.apache.org/docs/en/latest/cordova/events/events.html#deviceready
-document.addEventListener('deviceready', onDeviceReady, false);
+    const btnEdit = document.getElementById('btn-edit');
+    const btnCancel = document.getElementById('btn-cancel');
 
-function onDeviceReady() {
-    // Cordova is now initialized. Have fun!
+    const defaultProfile = {
+        name: "Jezriel Raphael Sia",
+        course: "BS Information Technology",
+        year: "3rd Year",
+        about: "Information Technology student specializing in mobile app development.",
+        skills: "HTML, CSS, JavaScript, Cordova, Git"
+    };
 
-    console.log('Running cordova-' + cordova.platformId + '@' + cordova.version);
-    document.getElementById('deviceready').classList.add('ready');
-}
+    function loadProfile() {
+        const savedProfile = JSON.parse(localStorage.getItem('studentProfile')) || defaultProfile;
+        
+        viewName.textContent = savedProfile.name;
+        viewCourse.textContent = savedProfile.course;
+        viewYear.textContent = savedProfile.year;
+        viewAbout.textContent = savedProfile.about;
+        viewSkills.textContent = savedProfile.skills;
+    }
+
+    btnEdit.addEventListener('click', () => {
+        const savedProfile = JSON.parse(localStorage.getItem('studentProfile')) || defaultProfile;
+
+        inputName.value = savedProfile.name;
+        inputCourse.value = savedProfile.course;
+        inputYear.value = savedProfile.year;
+        inputAbout.value = savedProfile.about;
+        inputSkills.value = savedProfile.skills;
+
+        errorMessage.style.display = 'none';
+        displayContainer.style.display = 'none';
+        editContainer.style.display = 'block';
+    });
+
+    btnCancel.addEventListener('click', () => {
+        editContainer.style.display = 'none';
+        displayContainer.style.display = 'block';
+    });
+
+    editForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        const name = inputName.value.trim();
+        const course = inputCourse.value.trim();
+        const year = inputYear.value.trim();
+        const about = inputAbout.value.trim();
+        const skills = inputSkills.value.trim();
+
+        if (!name || !course || !year || !about || !skills) {
+            errorMessage.textContent = "Please complete all required fields.";
+            errorMessage.style.display = 'block';
+            return;
+        }
+
+        const updatedProfile = { name, course, year, about, skills };
+
+        localStorage.setItem('studentProfile', JSON.stringify(updatedProfile));
+        loadProfile();
+
+        editContainer.style.display = 'none';
+        displayContainer.style.display = 'block';
+    });
+
+    loadProfile();
+});

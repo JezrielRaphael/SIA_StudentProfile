@@ -1,37 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
-  <title>Student Profile - Jezriel Raphael Sia</title>
-  <link rel="stylesheet" href="css/style.css">
-  <script src="cordova.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Student Profile - Jezriel Raphael Sia</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="cordova.js"></script>
 </head>
 <body>
 
-  <header>
-    <h1>Jezriel Raphael Sia</h1>
-    <img src="img/rieon.jpg" alt="Profile Picture of Jezriel" class="profile-pic">
-    <p>Student Profile</p>
-    
-    <nav>
-      <a href="index.html" class="active">Profile</a>
-      <a href="about.html">About</a>
-      <a href="skills.html">Skills</a>
-      <a href="projects.html">Projects</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
+    <header>
+        <h1>Jezriel Raphael Sia</h1>
+        <img src="img/rieon.jpg" alt="Profile Picture of Jezriel" class="profile-pic">
+        <p>Student Profile</p>
 
-  <section>
-    <h2>Welcome</h2>
-    <p>Welcome to my student profile application. I am an Information Technology student specializing in Software Engineering, Web Development, and data-driven solutions.</p>
-    <p>Use the navigation links above to explore my background, technical skill sets, previous projects, and contact information.</p>
-  </section>
+        <nav>
+            <a href="index.html" class="active">Profile</a>
+            <a href="about.html">About</a>
+            <a href="skills.html">Skills</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
 
-  <footer>
-    <p>&copy; 2026 Jezriel Raphael C. Sia. All rights reserved.</p>
-  </footer>
+    <section id="profile-display">
+        <h2>Welcome</h2>
+        <div class="card">
+            <h3>Profile Summary</h3>
+            <p><strong>Full Name:</strong> <span id="view-name">Jezriel Raphael Sia</span></p>
+            <p><strong>Course:</strong> <span id="view-course">BS Information Technology</span></p>
+            <p><strong>Year Level:</strong> <span id="view-year">3rd Year</span></p>
+            <p><strong>About Me:</strong> <span id="view-about">Information Technology student specializing in mobile app development.</span></p>
+            <p><strong>Skills:</strong> <span id="view-skills">HTML, CSS, JavaScript, Cordova, Git</span></p>
+            <button id="btn-edit" class="btn-ferrari">Edit Profile</button>
+        </div>
+    </section>
 
+    <!-- Edit Profile Form / Modal Container -->
+    <section id="profile-edit-container" style="display: none;">
+        <h2>Edit Profile</h2>
+        <form id="edit-profile-form" class="card">
+            <div id="error-message" style="color: #FFE000; background-color: #A6051A; padding: 10px; display: none; margin-bottom: 10px; border-radius: 4px;"></div>
+
+            <label for="input-name">Full Name:</label>
+            <input type="text" id="input-name" class="form-input">
+
+            <label for="input-course">Course:</label>
+            <input type="text" id="input-course" class="form-input">
+
+            <label for="input-year">Year Level:</label>
+            <input type="text" id="input-year" class="form-input">
+
+            <label for="input-about">About Me:</label>
+            <textarea id="input-about" class="form-input" rows="4"></textarea>
+
+            <label for="input-skills">Skills (comma-separated):</label>
+            <input type="text" id="input-skills" class="form-input">
+
+            <div style="margin-top: 15px;">
+                <button type="submit" class="btn-ferrari">Save</button>
+                <button type="button" id="btn-cancel" class="btn-secondary">Cancel</button>
+            </div>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Jezriel Raphael C. Sia. All rights reserved.</p>
+    </footer>
+
+    <script src="js/index.js"></script>
 </body>
 </html>

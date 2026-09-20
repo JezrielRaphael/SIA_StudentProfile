@@ -5,7 +5,7 @@
     regarding copyright ownership.  The ASF licenses this file
     to you under the Apache License, Version 2.0 (the
     "License"); you may not use this file except in compliance
-    with the License.  See the License.  You may obtain a copy of the License at
+    with the License.  You may obtain a copy of the License at
 
         http://www.apache.org/licenses/LICENSE-2.0
 
@@ -205,6 +205,106 @@ p {
   border-color: var(--ferrari-yellow);
 }
 
+/* ==========================================
+   ACTIVITY 5: EDIT PROFILE & FORM STYLES
+   ========================================== */
+
+.form-group {
+  margin-bottom: 1.2rem;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  color: var(--ferrari-white);
+  font-weight: bold;
+  font-size: 0.9rem;
+  margin-bottom: 0.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px 14px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 6px;
+  color: var(--ferrari-white);
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: var(--ferrari-yellow);
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 0 8px rgba(255, 224, 0, 0.3);
+}
+
+textarea.form-control {
+  resize: vertical;
+  min-height: 90px;
+}
+
+.alert-danger {
+  background-color: rgba(166, 5, 26, 0.2);
+  border: 1px solid var(--ferrari-red);
+  color: var(--ferrari-white);
+  padding: 10px 15px;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  font-weight: bold;
+  display: none;
+}
+
+.btn-group {
+  display: flex;
+  gap: 10px;
+  margin-top: 1.5rem;
+}
+
+.btn-ferrari {
+  background-color: var(--ferrari-red);
+  color: var(--ferrari-white);
+  border: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+}
+
+.btn-ferrari:hover {
+  background-color: var(--ferrari-yellow);
+  color: var(--ferrari-black);
+  transform: translateY(-2px);
+  box-shadow: 0 0 10px rgba(255, 224, 0, 0.4);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--text-muted);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 10px 20px;
+  font-weight: bold;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--ferrari-white);
+  border-color: var(--ferrari-white);
+}
+
 footer {
   text-align: center;
   padding: 1rem;
@@ -228,5 +328,15 @@ footer {
     width: auto;
     font-size: 0.75rem;
     padding: 6px 10px;
+  }
+
+  .btn-group {
+    flex-direction: column;
+  }
+
+  .btn-ferrari,
+  .btn-secondary {
+    width: 100%;
+    text-align: center;
   }
 }
